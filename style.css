@@ -1,0 +1,146 @@
+/* Impostazioni globali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Celeste chiaro */
+    color: #333;
+    text-align: center;
+    padding: 50px 20px;
+    background-image: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradiente colorato */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Titolo */
+h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animazione del titolo */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Pulsante */
+button {
+    background-color: #ff6347; /* Colore rosso-arancione brillante */
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff4500; /* Colore rosso più scuro al passaggio del mouse */
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #e03e00; /* Colore rosso ancora più scuro */
+}
+
+/* Stile per il contenuto */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Messaggi di alert */
+.alert {
+    background-color: #2ecc71; /* Colore verde brillante */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    display: none;
+    font-weight: bold;
+}
+
+.alert.error {
+    background-color: #e74c3c; /* Colore rosso per errore */
+}
+
+.alert.info {
+    background-color: #f39c12; /* Colore giallo per informazioni */
+}
+
+.alert.success {
+    background-color: #27ae60; /* Colore verde per successo */
+}
+
+/* Emoji per aggiungere un po' di stile */
+button::before {
+    content: "🎮 ";
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+h1::after {
+    content: "🎉";
+    font-size: 2rem;
+    margin-left: 10px;
+    animation: bounce 1s infinite;
+}
+
+/* Animazione di rimbalzo per l'emoji */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Modifiche responsive per schermi più piccoli */
+@media (max-width: 600px) {
+    body {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+}
